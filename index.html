@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Millenium Autoescola | Campinas - SP</title>
+<meta name="description" content="Autoescola Millenium em Campinas. Primeira habilitação, adição de categoria, renovação e reciclagem de CNH.">
+<style>
+:root{--primary:#e30613;--dark:#111;--light:#f7f7f7;--text:#222;--muted:#666;--white:#fff;--border:#e8e8e8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1140px,92%);margin:auto}
+.topbar{background:#111;color:#fff;font-size:14px;padding:9px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px #00000012}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;font-size:26px;letter-spacing:1px;color:#111}
+.logo span{color:var(--primary)}
+nav{display:flex;gap:25px;font-weight:700}
+nav a:hover{color:var(--primary)}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:13px 22px;border-radius:6px;font-weight:800;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(.92)}
+.btn-dark{background:#111}
+.hero{background:linear-gradient(115deg,#111 0%,#1e1e1e 55%,#3a0000 100%);color:#fff;padding:90px 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:50px}
+.tag{display:inline-block;color:#fff;background:var(--primary);padding:7px 14px;border-radius:30px;font-weight:800;font-size:13px;margin-bottom:18px}
+.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.05;margin-bottom:20px}
+.hero h1 span{color:#ff2532}
+.hero p{font-size:19px;color:#ddd;max-width:650px;margin-bottom:28px}
+.hero-card{background:#fff;color:#111;border-radius:18px;padding:28px;box-shadow:0 20px 60px #0008}
+.hero-card h3{font-size:24px;margin-bottom:12px}
+.hero-card ul{list-style:none}
+.hero-card li{padding:11px 0;border-bottom:1px solid var(--border)}
+.hero-card li:last-child{border:0}
+.hero-card li::before{content:"✓";color:var(--primary);font-weight:900;margin-right:9px}
+section{padding:78px 0}
+.section-head{text-align:center;max-width:760px;margin:0 auto 42px}
+.section-head .eyebrow{color:var(--primary);font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:1px}
+.section-head h2{font-size:38px;line-height:1.15;margin:8px 0 12px}
+.section-head p{color:var(--muted)}
+.services{background:var(--light)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:28px;transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #00000012}
+.icon{width:54px;height:54px;border-radius:12px;background:#ffe8ea;color:var(--primary);display:grid;place-items:center;font-size:25px;font-weight:900;margin-bottom:18px}
+.card h3{margin-bottom:8px;font-size:20px}
+.card p{color:var(--muted);font-size:15px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-box{background:#111;color:#fff;border-radius:20px;padding:38px}
+.about-box .big{font-size:65px;font-weight:900;color:#ff2532;line-height:1}
+.about-box p{color:#ddd;margin-top:10px}
+.benefits{display:grid;gap:18px;margin-top:25px}
+.benefit{display:flex;gap:15px}
+.benefit strong{display:block;margin-bottom:2px}
+.benefit p{color:var(--muted);font-size:14px}
+.check{flex:0 0 38px;height:38px;border-radius:50%;background:#ffe8ea;color:var(--primary);display:grid;place-items:center;font-weight:900}
+.stats{background:#111;color:#fff}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat strong{display:block;color:#ff2532;font-size:44px;line-height:1}
+.stat span{color:#ddd}
+.testimonials{background:var(--light)}
+.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quote{background:#fff;padding:26px;border-radius:14px;border:1px solid var(--border)}
+.stars{color:#f3b400;font-size:20px;margin-bottom:10px}
+.quote p{color:#555;font-style:italic;margin-bottom:15px}
+.quote strong{font-size:14px}
+.simulado{background:linear-gradient(120deg,#e30613,#97000a);color:#fff}
+.simulado .container{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.simulado h2{font-size:35px;margin-bottom:8px}
+.simulado p{color:#ffe5e7;max-width:720px}
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}
+.contact-info{background:#111;color:#fff;border-radius:18px;padding:35px}
+.contact-info h3{font-size:28px;margin-bottom:20px}
+.info{padding:15px 0;border-bottom:1px solid #333}
+.info:last-child{border:0}
+.info small{color:#aaa;display:block}
+.info a:hover{color:#ff2532}
+.form{border:1px solid var(--border);border-radius:18px;padding:35px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+label{font-size:14px;font-weight:800}
+input,select,textarea{font:inherit;border:1px solid #ddd;border-radius:7px;padding:13px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+textarea{min-height:130px;resize:vertical}
+footer{background:#0c0c0c;color:#ddd;padding:40px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:35px}
+footer h3{color:#fff;margin-bottom:12px}
+footer ul{list-style:none}
+footer li{margin:8px 0;color:#bbb}
+.copy{border-top:1px solid #292929;margin-top:30px;padding-top:18px;font-size:13px;color:#888;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.whatsapp{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:28px;font-weight:900;z-index:50;box-shadow:0 8px 25px #0004}
+.toast{position:fixed;right:20px;top:90px;background:#111;color:#fff;padding:15px 20px;border-radius:8px;display:none;z-index:100}
+@media(max-width:900px){
+ nav{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .grid4{grid-template-columns:1fr 1fr}.stat-grid{grid-template-columns:1fr 1fr}.quote-grid{grid-template-columns:1fr}
+ .simulado .container{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:560px){
+ .topbar .container{justify-content:center;text-align:center}.hero{padding:60px 0}
+ .grid4,.stat-grid,.form-grid,.footer-grid{grid-template-columns:1fr}
+ section{padding:58px 0}.section-head h2{font-size:31px}
+ .hero-card{padding:22px}.form,.contact-info{padding:25px}
+ .field.full{grid-column:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📍 Centro de Campinas - SP</span>
+    <span>📞 (19) 97600-3686 &nbsp; | &nbsp; (19) 3232-6623 / 3237-4343</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#inicio">MILLENIUM<span>.</span></a>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" href="https://wa.me/5519976003686" target="_blank">Falar no WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">AUTOESCOLA EM CAMPINAS</span>
+      <h1>Primeira habilitação com <span>excelência</span> é na Millenium.</h1>
+      <p>Há décadas ajudando a formar condutores responsáveis, seguros e preparados para o trânsito.</p>
+      <a class="btn" href="#contato">Quero saber mais</a>
+      <a class="btn btn-dark" href="#servicos" style="margin-left:8px">Ver serviços</a>
+    </div>
+    <div class="hero-card">
+      <h3>Por que escolher a Millenium?</h3>
+      <ul>
+        <li>CFC A e CFC B próximos</li>
+        <li>Aulas online e presenciais</li>
+        <li>Horários de manhã, tarde e noite</li>
+        <li>Agendamento através de sistema</li>
+        <li>Ótimo custo-benefício</li>
+        <li>Localização central em Campinas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Nossos serviços</div>
+      <h2>Encontre a solução para sua CNH</h2>
+      <p>Atendimento para diferentes etapas da formação e regularização de condutores.</p>
+    </div>
+    <div class="grid4">
+      <article class="card"><div class="icon">🚗</div><h3>Primeira Habilitação</h3><p>Processo para quem deseja conquistar a CNH nas categorias de carro e moto.</p></article>
+      <article class="card"><div class="icon">➕</div><h3>Adição de Categoria</h3><p>Acrescente as categorias A ou B à sua habilitação atual.</p></article>
+      <article class="card"><div class="icon">🪪</div><h3>Renovação CNH</h3><p>Orientação para realizar o processo de renovação da carteira de motorista.</p></article>
+      <article class="card"><div class="icon">📚</div><h3>Reciclagem CNH</h3><p>Suporte para quem precisa realizar curso de reciclagem de condutores.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container about-grid">
+    <div>
+      <div class="section-head" style="text-align:left;margin:0">
+        <div class="eyebrow">Sobre a Millenium</div>
+        <h2>Uma autoescola que prioriza você</h2>
+        <p>Segurança e humanização fazem parte de cada etapa do percurso.</p>
+      </div>
+      <div class="benefits">
+        <div class="benefit"><div class="check">✓</div><div><strong>Proximidade entre CFC A e CFC B</strong><p>Mais praticidade para o aluno e menos deslocamentos.</p></div></div>
+        <div class="benefit"><div class="check">✓</div><div><strong>Aulas online e presenciais</strong><p>Opções de horários pela manhã, tarde e noite.</p></div></div>
+        <div class="benefit"><div class="check">✓</div><div><strong>Agendamento via sistema</strong><p>Mais organização e praticidade para acompanhar as aulas.</p></div></div>
+        <div class="benefit"><div class="check">✓</div><div><strong>Excelente localização</strong><p>Unidade no Centro de Campinas, com ponto de ônibus em frente.</p></div></div>
+      </div>
+    </div>
+    <div class="about-box">
+      <div class="big">30</div>
+      <h3>Anos de experiência</h3>
+      <p>Compromisso com a formação de condutores responsáveis e seguros em Campinas e região.</p>
+      <hr style="border:0;border-top:1px solid #333;margin:25px 0">
+      <p><strong>Missão:</strong> preparar alunos com disciplina, conhecimento, atenção às regras de trânsito e confiança para sua jornada.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stat-grid">
+    <div class="stat"><strong>3482</strong><span>Alunos formados</span></div>
+    <div class="stat"><strong>30</strong><span>Anos de experiência</span></div>
+    <div class="stat"><strong>05</strong><span>Veículos novos</span></div>
+    <div class="stat"><strong>90%</strong><span>Aprovação no teste teórico</span></div>
+  </div>
+</section>
+
+<section id="depoimentos" class="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Depoimentos</div>
+      <h2>Quem aprende com a Millenium recomenda</h2>
+      <p>Experiências compartilhadas por alunos da autoescola.</p>
+    </div>
+    <div class="quote-grid">
+      <article class="quote"><div class="stars">★★★★★</div><p>“Ótimo atendimento e instrutores. Processo rápido e prático. Recomendo!”</p><strong>Lucas Particelli Faustino</strong></article>
+      <article class="quote"><div class="stars">★★★★★</div><p>“Equipe comprometida e sempre disposta a ajudar da melhor forma.”</p><strong>Diego Henrique</strong></article>
+      <article class="quote"><div class="stars">★★★★★</div><p>“Tive bastante suporte durante todo o processo para tirar a CNH.”</p><strong>Vitoria Souza</strong></article>
+      <article class="quote"><div class="stars">★★★★★</div><p>“Uma experiência excelente com uma equipe atenciosa e instrutores maravilhosos.”</p><strong>Raquel Franca</strong></article>
+      <article class="quote"><div class="stars">★★★★★</div><p>“Excelentes profissionais, professores e atendimento. Recomendo muito.”</p><strong>Eduardo Torres</strong></article>
+      <article class="quote"><div class="stars">★★★★★</div><p>“Atendimento próximo e orientação durante todas as etapas da habilitação.”</p><strong>Alunos Millenium</strong></article>
+    </div>
+  </div>
+</section>
+
+<section class="simulado">
+  <div class="container">
+    <div>
+      <h2>Preparado para o exame teórico?</h2>
+      <p>Treine seus conhecimentos antes da prova e conheça melhor o formato das questões do exame.</p>
+    </div>
+    <a class="btn btn-dark" href="https://www.detran.sp.gov.br/" target="_blank">Acessar Detran-SP</a>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Entre em contato</div>
+      <h2>Comece sua jornada para a CNH</h2>
+      <p>Preencha o formulário e nossa equipe poderá entrar em contato para orientar você.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Millenium Autoescola</h3>
+        <div class="info"><small>Endereço</small>Rua José Paulino, 1426 - Centro<br>Campinas - SP, 13013-001</div>
+        <div class="info"><small>WhatsApp</small><a href="https://wa.me/5519976003686" target="_blank">(19) 97600-3686</a></div>
+        <div class="info"><small>Telefones</small>(19) 3232-6623 / 3237-4343</div>
+        <div class="info"><small>E-mail</small><a href="mailto:cfc.millenium@bol.com.br">cfc.millenium@bol.com.br</a></div>
+        <div class="info"><small>CNPJ</small>04.836.280/0001-23</div>
+        <div class="info"><small>Razão Social</small>Centro de Formação de Condutores Millenium Ltda.</div>
+      </div>
+      <form class="form" id="contactForm">
+        <div class="form-grid">
+          <div class="field"><label>Nome</label><input required type="text" placeholder="Seu nome"></div>
+          <div class="field"><label>Telefone</label><input required type="tel" placeholder="(00) 00000-0000"></div>
+          <div class="field"><label>E-mail</label><input type="email" placeholder="seu@email.com"></div>
+          <div class="field"><label>Serviço</label><select><option>Primeira Habilitação</option><option>Adição de Categoria</option><option>Renovação CNH</option><option>Reciclagem CNH</option><option>Outro</option></select></div>
+          <div class="field full"><label>Mensagem</label><textarea placeholder="Como podemos ajudar?"></textarea></div>
+          <div class="field full"><button class="btn" type="submit">Enviar mensagem</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h3>MILLENIUM.</h3><p>Formação de condutores com foco em segurança, responsabilidade e excelência.</p></div>
+      <div><h3>Serviços</h3><ul><li>1ª Habilitação</li><li>Adição de Categoria</li><li>Renovação CNH</li><li>Reciclagem CNH</li></ul></div>
+      <div><h3>Contato</h3><ul><li>(19) 97600-3686</li><li>(19) 3232-6623</li><li>cfc.millenium@bol.com.br</li><li>Rua José Paulino, 1426 - Centro</li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 Millenium Autoescola. Todos os direitos reservados.</span><span>CNPJ 04.836.280/0001-23</span></div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5519976003686" target="_blank" aria-label="WhatsApp">◉</a>
+<div class="toast" id="toast">Mensagem preparada! Para envio real, conecte este formulário ao seu e-mail ou backend.</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('toast').style.display='block';
+  this.reset();
+  setTimeout(()=>document.getElementById('toast').style.display='none',4000);
+});
+</script>
+</body>
+</html>
